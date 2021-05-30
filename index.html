@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Muhammad Iqbal Tawakal">
+    <meta name="description" content="Bookshelf Apps">
+    <meta name="keywords" content="Bookself Web Application">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bookshelf Web Application</title>
+  </head>
+  <body>
+    <!-- Header Title -->
+    <header class="shadow">
+        <h1>Bookself Apps</h1>
+    </header>
+    <!-- Bagian Menambahkan data buku -->
+    <div class="wrapper">
+        <div class="container shadow">
+            <h2 class="container-header text-center">Menambahkan Data Buku</h2>
+            <hr class="horizontal-line">
+            <form action="" class="form" id="form">
+                <div class="form-group form-title">
+                    <label class="label-input" for="titleBooks">Judul : </label>
+                    <input type="text" id="titleBooks" name="titleBooks" required minlength="4" placeholder="book title">
+
+                </div>
+                <div class="form-group form-title">
+                    <label class="label-input" for="authorBooks">Penulis : </label>
+                    <input type="text" id="authorBooks" name="authorBooks" required minlength="2" placeholder="author of books">
+                </div>
+                <div class="form-group form-title">
+                    <label class="label-input" for="yearBooks">Tahun : </label>
+                    <input type="number" id="yearBooks" name="yearBooks" required min="0000" value="2000" placeholder="the year of publication of the book e.g 2000">
+                </div>
+                <div class="form-group form-title" id="form-checkbox">
+                    <input type="checkbox" name="iscomplete" id="iscomplete">
+                    <label class="label-input"for="iscomplete">Sudah dibaca ?</label>
+                </div>
+                <input class="submitButton" type="submit" value="Masukkan buku ke rak belum dibaca">
+            </form>
+        </div>
+    </div>
+    <!-- List buku yang belum selesai dibaca -->
+    <div class="wrapper">
+        <div class="container shadow">
+            <h2 class="containe-header text-center">Belum selesai dibaca</h2>
+            <hr class="horizontal-line">
+            <div class="list-item" id="uncomplete-read">
+
+            </div>
+        </div>        
+    </div>
+    <!-- List buku yang sudah selesai dibaca -->
+    <div class="wrapper">
+        <div class="container shadow">
+            <h2 class="container-header text-center">Sudah selesai dibaca</h2>
+            <hr class="horizontal-line">
+            <div class="list-item" id="complete-read">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>  
+    </body>
+</html>
